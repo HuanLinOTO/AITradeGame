@@ -24,6 +24,21 @@
 
 ## 安装
 
+### 方式一：使用 Docker（推荐）
+
+```bash
+# 使用 Docker Hub 镜像
+docker run -d -p 5000:5000 -v ./data:/app/data huanlinoto/aitradegame:latest
+
+# 或使用 GitHub Container Registry 镜像
+docker run -d -p 5000:5000 -v ./data:/app/data ghcr.io/huanlinoto/aitradegame:latest
+
+# 或使用 docker-compose
+docker-compose up -d
+```
+
+### 方式二：直接安装
+
 ```bash
 pip install -r requirements.txt
 python app.py
